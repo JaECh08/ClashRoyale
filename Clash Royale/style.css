@@ -1,0 +1,112 @@
+* {
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  background: linear-gradient(135deg, #1e1e2f, #2c2c54);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.screen {
+  display: none;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.screen.active {
+  display: flex;
+}
+
+button {
+  padding: 12px 25px;
+  font-size: 18px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  background: #ffcc00;
+  color: #222;
+  font-weight: bold;
+}
+
+/* Start screen */
+.player-control {
+  position: absolute;
+  bottom: 30px;
+  left: 30px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.player {
+  font-size: 30px;
+  opacity: 0.25;
+}
+
+.player.active {
+  opacity: 1;
+  transform: scale(1.2);
+}
+
+/* GAME */
+.card-container {
+  perspective: 1000px;
+  margin: 30px 0;
+}
+
+.card {
+  width: 200px;
+  height: 260px;
+  transform-style: preserve-3d;
+  transition: transform 0.7s;
+  cursor: pointer;
+}
+
+.card.flip {
+  transform: rotateY(180deg);
+}
+
+.card .front,
+.card .back {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.front {
+  background: #ffffff20;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.back {
+  background: #111;
+  transform: rotateY(180deg);
+  flex-direction: column;
+}
+
+.back img {
+  max-width: 100%;
+  border-radius: 12px;
+}
+
+#imposterText {
+  display: none;
+  font-size: 24px;
+  margin-top: 10px;
+  color: #ff5555;
+}

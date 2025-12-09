@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Clash Royale Imposter</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- START SCREEN -->
+  <div id="startScreen" class="screen active">
+    <button id="startBtn">START GAME</button>
+
+    <div class="player-control">
+      <button id="minusBtn">−</button>
+
+      <div class="players">
+        <span class="player active">👤</span>
+        <span class="player active">👤</span>
+        <span class="player active">👤</span>
+        <span class="player">👤</span>
+        <span class="player">👤</span>
+      </div>
+
+      <button id="plusBtn">+</button>
+    </div>
+  </div>
+
+  <!-- GAME SCREEN -->
+  <div id="gameScreen" class="screen">
+    <h2 id="userLabel">User 1</h2>
+
+    <!-- CARD -->
+    <div class="card-container">
+      <div id="card" class="card">
+        <div class="front">?</div>
+        <div class="back">
+          <img id="cardImg">
+          <div id="imposterText">IMPOSTER</div>
+        </div>
+      </div>
+    </div>
+
+    <button id="nextBtn">NEXT</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
